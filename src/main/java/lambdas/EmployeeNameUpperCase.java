@@ -1,6 +1,7 @@
 package lambdas;
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -10,13 +11,12 @@ import static java.lang.System.out;
 
 public class EmployeeNameUpperCase {
     public static void main(String[] args) {
-        List<Employee> employeeList = List.of(
-                new Employee("Joe","IT"),
-                new Employee("Patrick","Sales"),
-                new Employee("Tony","Finance"),
-                new Employee("Amber","IT"),
-                new Employee("Brady",null)
-        );
+        List<Employee> employeeList = new ArrayList<>();
+        employeeList.add(new Employee("Joe", "IT"));
+        employeeList.add(new Employee("Patrick", "Sales"));
+        employeeList.add(new Employee("Tony", "Finance"));
+        employeeList.add(new Employee("Amber", "IT"));
+        employeeList.add(new Employee("Brady", null));
         employeeList.stream().map(employee -> {
             employee.setEmployeeName(employee.getEmployeeName().toUpperCase());     //for Map we need to return each element and collect it with collectors.
             return employee;

@@ -2,8 +2,7 @@ package junit;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
+import static junit.framework.Assert.assertEquals;
 
 public class DivideCalculatorTest {
 
@@ -17,5 +16,4 @@ public class DivideCalculatorTest {
         int result = DivideCalculator.divide(8, 4);
         assertEquals(2, result);
     }
-
 }
