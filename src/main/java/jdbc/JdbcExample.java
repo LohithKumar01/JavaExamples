@@ -28,8 +28,6 @@ public class JdbcExample {
                 System.out.println("Employee ID: " + empId + ", Employee Name: " + empName);
             }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
